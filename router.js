@@ -10,9 +10,14 @@ const routes = [
         component: () => import('./pages/play_game.vue')
     },
     {
+        path: '/leaderboard',
+        name: 'Game',
+        component: () => import('./pages/leaderboard.vue')
+    },
+    {
         path: '/',
         name: 'Main Menu',
-        component: () => import('./pages/main_menu.vue')
+        component: () => import('./pages/index.vue')
     },
 ];
 

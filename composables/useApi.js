@@ -9,6 +9,14 @@ export async function $get(endpoint, metadata) {
   });
 }
 
+export async function $exit(endpoint) {
+  return useFetch(endpoint, {
+    baseURL: "http://localhost:5000/",
+    method: "GET",
+    initialCache: false,
+  });
+}
+
 export async function $post(endpoint, body, metadata) {
   return useFetch(endpoint, {
     baseURL: BASE_URL,
